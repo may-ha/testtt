@@ -54,6 +54,7 @@
 var slides = document.querySelectorAll(".slide");
 var dots = document.querySelectorAll(".dot");
 var index = 0;
+let time = 5000;
 
 function prevSlide(n) {
   index += n;
@@ -82,3 +83,23 @@ function changeSlide() {
   slides[index].style.display = "block";
   dots[index].classList.add("active");
 }
+const defClass = (startPos, index) => {
+  for (let i = startPos; i < imgs.length; i++) {
+    imgs[i].style.display = "none";
+    dots[i].classList.remove("fa-dot-circle");
+    dots[i].classList.add("fa-circle");
+  }
+  imgs[index].style.display = "block";
+  dots[index].classList.add("fa-dot-circle");
+};
+
+defClass(1, 0);
+
+const imgs = document.querySelectorAll(".slider img");
+const startAutoSlide = () => {
+  setInterval(() => {
+    index >= imgs.length - 1 ? (index = 0) : index++;
+    defClass(0, index);
+  }, time);
+};
+startAutoSlide();
