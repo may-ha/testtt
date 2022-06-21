@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id="slider">
+
+
+      <p class="control_next"><i class="fas fa-angle-right"></i></p>
+      <p class="control_prev"><i class="fas fa-angle-left"></i></p>
+      <ul>
+        <li class="slide1">
+          <div class="slider-title-wrapper">
+            <h3 class="slider-title"></h3>
+          </div>
+          <img src="images/كسوة-عيد-الأضحى-1.png" alt="" />
+        </li>
+        <li class="slide2">
+          <div class="slider-title-wrapper">
+            <h3 class="slider-title"></h3>
+          </div>
+          <img src="images/كسوة-عيد-الأضحى-2.png" alt="" />
+        </li>
+        <li class="slide3">
+          <div class="slider-title-wrapper">
+            <h3 class="slider-title"></h3>
+          </div>
+          <img src="images/كسوة-عيد-الأضحى-3.png" alt="" />
+        </li>
+        <li class="slide4">
+          <div class="slider-title-wrapper"></div>
+          <img src="images/كسوة-عيد-الأضحى-1.png" alt="" />
+        </li>
+      </ul>
+    </div> -->
+
+    <div id="slider">
+      <div class="slide" style="background: dodgerBlue">
+        <img src="images/كسوة-عيد-الأضحى-1.png" />
+      </div>
+
+      <div class="slide" style="background: coral">
+        <img src="images/كسوة-عيد-الأضحى-2.png" />
+      </div>
+
+      <div class="slide" style="background: crimson">
+        <img src="images/كسوة-عيد-الأضحى-3.png" />
+      </div>
+
+      <!--Controlling arrows-->
+      <span class="controls" onclick="prevSlide(-1)" id="left-arrow"
+        ><i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </span>
+      <span class="controls" id="right-arrow" onclick="nextSlide(1)"
+        ><i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </span>
+    </div>
+    <div id="dots-con">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span
+      ><span class="dot"></span>
+    </div>
+
+    <div class="container">
+      <div style="display: flex; justify-content: center; align-items: center">
+        <div class="title" dir="rtl">
+          <h1>#ساهم معنا بفرحه طفل في العيد</h1>
+        </div>
+      </div>
+
+      <div class="para" dir="rtl">
+        <p>
+          <br />
+          ب 100 شاقل فقط رح توفر كسوه عيد وعيديه وهديه لطفل او طفله , في مخيمات
+          <br />
+          واماكن اللجوء والنزوح في سوريا اليونان تركيا , لطفل في العراق او في
+          <br />
+          اليمن , او الاطفال في غزه
+        </p>
+      </div>
+      <div dir="rtl" style="display: flex;justify-content:center;align-items:center"><span>#_اضحى _مع اللاجئين</span></div>
+      <div class="paymentMethod" dir="rtl">
+        <!-- <div class="cards">
+
+          <div class="card">
+            <div>للتبرع عن طريق paypal</div>
+            <div><i class="fa-brands fa-cc-paypal"></i></div>
+          </div>
+          <div class="card">
+            <div>للتبرع عن طريق Visa</div>
+            <div><i class="fa-brands fa-cc-visa"></i></div>
+          </div>
+        </div> -->
+
+        <div class="cards-list">
+          <div class="card card1">
+          <div class="card_image">
+            <a href="https://www.seedsofhumanity.org/donate?lang=ar&type=once"><i class="fa-brands fa-cc-visa"></i></a>
+            </div>
+          <div class="card_title title-white">
+           <h6 class="heading">التبرع </h6>
+            <p>بواسطه بطاقه الائتمان</p>
+           
+          </div>
+             <div class="btn-read">
+            <a href="https://www.seedsofhumanity.org/donate?lang=ar&type=once" class="btn-flip" data-back="اضغط هنا" data-front="اضغط هنا"></a>
+        </div>
+        </div>
+        
+        
+          <div class="card card2">
+          <div class="card_image">
+            <a href="https://www.seedsofhumanity.org/donate?lang=ar&type=once"><i class="fa-brands fa-cc-paypal"></i></a>
+            </div>
+          <div class="card_title title-white">
+           <h6 class="heading">للتبرع</h6>
+            <p>بواسطه paypal</p>
+           
+          </div>
+            <div class="btn-read">
+            <a href="https://www.seedsofhumanity.org/donate?lang=ar&type=once" class="btn-flip" data-back="اضغط هنا" data-front="اضغط هنا"></a>
+        </div>
+          </div>
+        
+        
+          <div class="card card3">
+          <div class="card_image">
+            <a href=""><i class="fa-solid fa-money-bill-transfer"></i></a>
+            </div>
+          <div class="card_title title-white">
+           <h6 class="heading">تفاصيل تبرع البنك</h6>
+            <p>بنك : مزراحي طفحوت </p>
+            <p>رقم الفرع : 549</p>
+            <p>رقم الحساب : 101074</p>
+            <p>ملاحظه : التبرع תרומה</p>
+            <p>שם מוטב : ניצנים</p>
+           
+          </div>
+        
+        </div>
+        
+        </div>
+        </section>
+
+
+
+
+      </div>
+      <div dir="rtl" style="display:flex ;justify-content:center;align-items:center;font-size:24px;">
+        للتبرع النقدي أخبرونا برسالة واتساب من أي بلد وسنهتم بتوصيلكم بمندوب
+        قريب:
+        <a href="https://wa.me/97248669955"><i class="fa-brands fa-whatsapp" style="color: green;font: size 40px;"></i></a></i>
+      </div>
+      <br /><br />
+      <div class="videos" dir="rtl">
+        <div class="vid-1">
+          <div><span>فيديو توزيعات عيديات من حمله سابقه :</span></div>
+          <div>
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/aJBgOzZP0k0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="vid-2">
+          <div><span>فيديو كسوات العيد من حملات سابقة :</span></div>
+          <div>
+         
+<iframe width="500" height="315" src="https://www.youtube.com/embed/9fZXf0Hc0Uw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          </div>
+        </div>
+      </div>
+
+      <div
+        dir="rtl"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 50px;
+        "
+      >
+        <h3>
+          <span>بارك الله بكم <i class="fa-solid fa-heart" style="color: green"></i>
+         </span>
+        </h3>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <h5>بذور من أجل الطمنانية | seeds of Hummnity</h5>
+      </div>
+      <div class="icons-footer">
+        <div class="facebook">
+          <a href="https://www.facebook.com/seedsofhumanity/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </div>
+        <div class="instagram">
+        <a href="https://instagram.com/seeds_of_humanity?igshid=YmMyMTA2M2Y=">  <i class="fa-brands fa-instagram"></i></a> </div>
+        <div class="youtube"><a href="https://www.youtube.com/channel/UCRwafWzlv69ZREDLonz53uw"><i class="fa-brands fa-youtube"></i></a></div>
+        <div class="web"><a href="https://www.seedsofhumanity.org/">
+          <i class="fa-brands fa-internet-explorer"></i>
+        </a></div>
+        <div class="whatsupp">
+          <a href="https://wa.me/97248669955"><i class="fa-brands fa-whatsapp"></i></a></div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
